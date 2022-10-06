@@ -1,19 +1,22 @@
 <script>
+import CardComponent from '@/components/cardComponent.vue'
   // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue'
+  
+import ImageComponetent from '../components/ImageComponetent.vue'
+
   
   export default {
     name: 'HomeView',
     components: {
-      HelloWorld
-    }
+    ImageComponetent,
+        CardComponent,
+}
   }
   </script>
 
 <template>
   <div class="home">
-    <HelloWorld></HelloWorld>
+    <ImageComponetent></ImageComponetent>
+    <card-component></card-component>
   </div>
 </template>
-
-

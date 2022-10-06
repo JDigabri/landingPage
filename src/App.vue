@@ -1,18 +1,18 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/" class = "keyzy">KeyZy</router-link>
+    <router-link to="/about" class = "abt">About</router-link>
   </nav>
   <router-view/>
   
 </template>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 body{
@@ -20,16 +20,30 @@ body{
 
 }
 nav {
-  padding: 30px;
+  padding: 3.23vh;
   background-color: black;
+  position: sticky;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #FFFFFF;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #FFFFFF;
 }
+
+.keyzy{
+  text-align: left;
+  font-size:3vh;
+  text-decoration: none;
+}
+
+.abt{
+  font-size: 3vh;
+  text-decoration: none;
+  float:right;  
+}
+
 </style>

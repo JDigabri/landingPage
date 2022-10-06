@@ -1,4 +1,5 @@
 <script>
+// https://coreui.io/vue/docs/layout/containers.html
 import '@coreui/coreui/dist/css/coreui.min.css'
 import { CCarousel } from '@coreui/vue';
 import { CCarouselItem } from '@coreui/vue';
@@ -12,8 +13,6 @@ export default {
     }
 }
 </script>
-    
-
 
 <template>
 <div>
