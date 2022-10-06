@@ -35,7 +35,7 @@ p{
 .ez{
     padding-left: 30vh;
     padding-top: 1vh;
-    color: #FFFFFF;
+    color: #C5C5C5;
     font-size: 3.5vh;
     font-weight: bold;
     margin:none !important;

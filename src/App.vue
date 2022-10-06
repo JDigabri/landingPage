@@ -45,5 +45,7 @@ nav a.router-link-exact-active {
   text-decoration: none;
   float:right;  
 }
-
+a:hover {
+  color: grey;
+}
 </style>
