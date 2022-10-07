@@ -20,7 +20,7 @@ body{
 
 }
 nav {
-  padding: 3.23vh;
+  padding: 1.5rem;
   background-color: black;
   position: sticky;
 }
@@ -36,12 +36,12 @@ nav a.router-link-exact-active {
 
 .keyzy{
   text-align: left;
-  font-size:3vh;
+  font-size:2rem;
   text-decoration: none;
 }
 
 .abt{
-  font-size: 3vh;
+  font-size: 2rem;
   text-decoration: none;
   float:right;  
 }

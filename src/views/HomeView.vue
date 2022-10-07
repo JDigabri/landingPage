@@ -1,22 +1,23 @@
 <script>
 import CardComponent from '@/components/cardComponent.vue'
-  // @ is an alias to /src
-  
 import ImageComponetent from '../components/ImageComponetent.vue'
+import FoooterRights from '../components/foooterRights.vue'
 
   
   export default {
     name: 'HomeView',
     components: {
     ImageComponetent,
-        CardComponent,
+    CardComponent,
+    FoooterRights
 }
   }
   </script>
 
 <template>
-  <div class="home">
+  <div id="home">
     <ImageComponetent></ImageComponetent>
     <card-component></card-component>
+    <FoooterRights></FoooterRights>
   </div>
 </template>

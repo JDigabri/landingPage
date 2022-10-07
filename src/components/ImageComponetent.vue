@@ -2,11 +2,10 @@
     <div class = "BG">
         <div class = "sft-keys">
         Buying Software Keys
-        <div class = "ez">
-            Made Easy
+            <div class = "ez">
+                Made Easy
+            </div>
         </div>
-        </div>
-
     </div>
 </template>
 
@@ -25,18 +24,18 @@ p{
 }
 
 .sft-keys{
-    padding-left: 5vh;
-    padding-top: 25vh;
+    padding-left: 5rem;
+    padding-top: 15rem;
     color: #FFFFFF;
-    font-size: 8vh;
+    font-size: 5rem;
     font-weight: bold;
     margin:none !important;
 }
 .ez{
-    padding-left: 30vh;
-    padding-top: 1vh;
+    padding-left: 18rem;
+    padding-top: .5rem;
     color: #C5C5C5;
-    font-size: 3.5vh;
+    font-size: 2rem;
     font-weight: bold;
     margin:none !important;
 }
