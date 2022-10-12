@@ -1,23 +1,19 @@
 <script>
-import CardComponent from '@/components/cardComponent.vue'
-import ImageComponetent from '../components/ImageComponetent.vue'
-import FoooterRights from '../components/foooterRights.vue'
+
+import Splash from '@/components/SplashPage.vue';
 
   
   export default {
     name: 'HomeView',
     components: {
-    ImageComponetent,
-    CardComponent,
-    FoooterRights
+    Splash
 }
   }
-  </script>
+</script>
 
 <template>
   <div id="home">
-    <ImageComponetent></ImageComponetent>
-    <card-component></card-component>
-    <FoooterRights></FoooterRights>
+    <Splash/>
+
   </div>
 </template>

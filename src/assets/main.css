@@ -1,7 +1,9 @@
 :root {
-    --g1: rgb(98, 0, 234);
-    --g2: rgb(236, 64, 122);
-    --g3: rgba(0, 0, 0, 0);
+    --g1: rgb(216, 146, 15);
+    --g2: rgb(21, 233, 222);
+    --g3: rgb(255, 75, 75);
+    --g4: rgb(85, 0, 67);
+    --g5: rgb(0, 0, 0);
   }
   
   @keyframes background-pan {
@@ -15,7 +17,7 @@
   }
   
   body {
-    animation: background-pan 10s linear infinite;
+    animation: background-pan 20s linear infinite;
     background: linear-gradient(
       to right,
       var(--g1),
@@ -28,43 +30,18 @@
     margin: 0px;
   }
   
-  body.toggled {
-    animation: none;
-  }
-  
-  body.toggled > #title {
-    opacity: 0;
-  }
-  
-  body.toggled > #icon {
-    opacity: 1;
-  }
-  
-  body.toggled > #tiles > .tile:hover {
-    opacity: 0.1 !important;
-  }
-  
+
   .centered {
-    left: 50%;
+    left: 52%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   
-  #tiles {
-    height: calc(100vh - 1px);
-    width: calc(100vw - 1px);
-    position: relative;
-    z-index: 2;
-    
-    display: grid;
-    grid-template-columns: repeat(var(--columns), 1fr);
-    grid-template-rows: repeat(var(--rows), 1fr);
-  }
-  
 
+  
   #title {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: "Rubik", sans-serif;
     font-size: 5.5vw;
     margin: 0px;
@@ -86,13 +63,9 @@
 
   
   #title > .fancy {
-    color: transparent;
-    background-image: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
-    -webkit-background-clip: text;
-    animation: animate 10s linear infinite;
-    -webkit-background-size: 500%;
-    background-size: 500%;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;    font-size: 1.5em;
+    color: var(--g3);
+    font-family: 'Dancing Script', sans-serif;    
+    font-size: 1.5em;
     line-height: 0.9em;
   }
   @keyframes animate{
@@ -115,3 +88,35 @@
     z-index: 1;
   }
 
+.BG{
+    margin:10px;
+    background-color: #020202;
+    height:75vh;
+
+}
+
+.centeredBUT {
+  left: 50%;
+  position: absolute;
+  top: 75%;
+  transform: translate(-85%, -50%);
+}
+
+.centeredBUT > .underbutton {
+  position: absolute;
+  transform: translate(7.5%, 30%);
+}
+
+#keytitle {
+  color: rgb(0, 0, 0);
+  font-family: "Raleway", sans-serif;
+  font-size: 5.5vw;
+  margin: 0px;
+  pointer-events: none;
+  transition: opacity 1200ms ease;
+  width: 50vw;
+  z-index: 3;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+}
