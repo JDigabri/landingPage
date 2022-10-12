@@ -23,7 +23,7 @@
 
 <template>
     <div class = "BG">
-        <CCard style="width: 18rem">
+        <CCard style="width: 18rem; background-color: #322F37;">
         <CCardImage orientation="top" src="../images/key.png" />
             <CCardBody>
                 <CCardTitle>Card title</CCardTitle>
@@ -40,8 +40,10 @@
 
 <style scoped>
 .BG{
-    background-color: #322F37;
+    margin:10px;
+    background-color: #000000;
     height:75vh;
+
 }
 
 </style>
