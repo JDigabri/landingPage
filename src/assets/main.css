@@ -2,8 +2,8 @@
     --g1: rgb(216, 146, 15);
     --g2: rgb(21, 233, 222);
     --g3: rgb(255, 75, 75);
-    --g4: rgb(85, 0, 67);
-    --g5: rgb(0, 0, 0);
+    --g4: rgb(149, 255, 149);
+    --g5: rgb(255, 158, 218);
   }
   
   @keyframes background-pan {
@@ -17,11 +17,13 @@
   }
   
   body {
-    animation: background-pan 20s linear infinite;
+    animation: background-pan 30s linear infinite;
     background: linear-gradient(
       to right,
       var(--g1),
       var(--g2),
+      var(--g4),
+      var(--g5),
       var(--g1)
     );
     background-size: 200%;
@@ -115,7 +117,7 @@
   pointer-events: none;
   transition: opacity 1200ms ease;
   width: 50vw;
-  z-index: 3;
+  z-index: 10;
   position: absolute;
   text-align: center;
   width: 100vw;
