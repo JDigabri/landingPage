@@ -18,7 +18,6 @@
     <button v-on:click="hidden = !hidden; debug();">|||</button>  
   </div>
 </template>
-
 <script>
 
   export default {
@@ -152,8 +151,8 @@
     background-color: white;
     background-size: 100%;
     z-index: -1;
-    height: 100vh;
-    width: 100vw;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     animation: background-pan 30s linear infinite;
     background: linear-gradient(
       to right,
@@ -165,6 +164,7 @@
     );
     background-size: 200%;
     overflow-x: hidden;
+    overflow-y: hidden;
     position: absolute;
 
   }
