@@ -62,7 +62,7 @@
   }
   body{
     margin: 0px;
-  
+    overflow-y: hidden;
   }
 
   /* MOBILE VIEW */
