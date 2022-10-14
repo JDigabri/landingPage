@@ -136,7 +136,7 @@
   .menu-toggler:checked ~ .stagger-menu li {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: calc(0.155s * var(--i));
+    transition-delay: calc(0.05s * var(--i));
   }
   nav {
     padding: 1.5rem;
