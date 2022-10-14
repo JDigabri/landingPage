@@ -88,7 +88,7 @@
       var(--g5),
       var(--g1)
     );
-    background-size: 200%;
+    background-size: 600%;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     overflow-x: hidden;
@@ -124,13 +124,13 @@
   }
 
   .stagger-menu li {
-    margin-bottom: 0px;
+    margin-top: 0;
     font-size: 18px;
     opacity: 0;
     transform: translateX(100%);
     transition-property: opacity, transform;
     transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(.8, -0.015, 0.565, 1.055);
+    transition-timing-function: cubic-bezier(.6, -0.015, 0.565, 1.055);
   }
 
   .menu-toggler:checked ~ .stagger-menu li {
@@ -171,7 +171,8 @@
     font-size: 5vw;
     text-decoration: none;
     text-align: center;
-    width: 100%;  
+    width: 100%;
+
   }
   a:hover {
     color: rgb(0, 0, 0);
@@ -219,7 +220,7 @@
     z-index: -1;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
-    background-size: 200%;
+    background-size: 600%;
     padding:0;
     overflow-x: hidden;
     overflow-y: hidden;

@@ -141,5 +141,34 @@
     font-size: 13vw;
     line-height: 0.9em;
   }
+  #keytitle {
+    color: rgb(0, 0, 0);
+    font-family: "Raleway", sans-serif;
+    font-size: 10vw;
+    margin: 0px;
+    pointer-events: none;
+    transition: opacity 1200ms ease;
+    width: 50vw;
+    z-index: 10;
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+  }
+  body {
+    animation: background-pan 30s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--g1),
+      var(--g2),
+      var(--g4),
+      var(--g5),
+      var(--g1)
+    );
+    background-size: 600%;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0px;
+  }
+  
 
 }
