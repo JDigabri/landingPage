@@ -6,17 +6,26 @@
     <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >About</p></router-link>
     <router-link to="/" class = "abt" ><p class ="hover-underline-animation" >Home</p></router-link>
   </nav>
-  <nav id = "mobileNav">
-    <router-link to="/about" class = "abt" id="mtext" v-on:click="hidden = !hidden; debug();"><p class ="hover-underline-animation" >Contact</p></router-link>
-    <router-link to="/about" class = "abt" id="mtext1"  v-on:click="hidden = !hidden; debug();"><p class ="hover-underline-animation" >Mailing List</p></router-link>
-    <router-link to="/about" class = "abt" id="mtext2"  v-on:click="hidden = !hidden; debug();"><p class ="hover-underline-animation" >Social Media</p></router-link>
-    <router-link to="/about" class = "abt" id="mtext3"  v-on:click="hidden = !hidden;debug();"><p class ="hover-underline-animation" >About</p></router-link>
-    <router-link to="/" class = "abt" id="mtext4"  v-on:click="hidden = !hidden; debug();"><p class ="hover-underline-animation" >Home</p></router-link>
+
+  <div class ="container">
+  <nav  id = "mobileNav">
+      <input type="checkbox" name="menu" id="menu" class="menu-toggler">
+      <label for="menu" class="menu-toggler-label">Menu</label>
+
+
+    <ul class ="stagger-menu">
+      <li class = "backgroundLI" style="--i: 0"></li>
+      <li style="--i: 1"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >Contact</p></router-link></li>
+      <li style="--i: 2"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >Mailing List</p></router-link></li>
+      <li style="--i: 3"> <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Social Media</p></router-link></li>
+      <li style="--i: 4"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >About</p></router-link></li>
+      <li style="--i: 5"> <router-link to="/" class = "abt"><p class ="hover-underline-animation" >Home</p></router-link></li>
+
+    </ul>
   </nav>
-  <router-view/>
-  <div id = "three">
-    <button v-on:click="hidden = !hidden; debug();">|||</button>  
   </div>
+  <router-view/>
+
 </template>
 <script>
 
@@ -29,24 +38,7 @@
     },
 
     methods: {
-    debug() {
-      if(this.hidden == false){
-        document.getElementById("mobileNav").style.zIndex = "5";
-        document.getElementById("mtext").style.display = "block";
-        document.getElementById("mtext1").style.display = "block";
-        document.getElementById("mtext2").style.display = "block";
-        document.getElementById("mtext3").style.display = "block";
-        document.getElementById("mtext4").style.display = "block";
-      }
-      else{
-        document.getElementById("mobileNav").style.zIndex = "-1";
-        document.getElementById("mtext").style.display = "none";
-        document.getElementById("mtext1").style.display = "none";
-        document.getElementById("mtext2").style.display = "none";
-        document.getElementById("mtext3").style.display = "none";
-        document.getElementById("mtext4").style.display = "none";
-      }
-      }
+ 
     } 
   }
 
@@ -67,7 +59,86 @@
 
   /* MOBILE VIEW */
   @media only screen and (max-width: 1200px) {
-    nav {
+
+  .container {
+    overflow-x: hidden;
+    z-index: 5;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    position: absolute;
+
+  }
+
+  @keyframes backgroundz {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  .backgroundLI{
+    animation: backgroundz 30s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--g1),
+      var(--g2),
+      var(--g4),
+      var(--g5),
+      var(--g1)
+    );
+    background-size: 200%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    overflow-x: hidden;
+    margin: 0px;
+    position: absolute;
+
+  }
+  .menu-toggler {
+    display: none;
+  }
+
+  .menu-toggler-label {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin:0px;
+    padding:0px;
+    position: absolute;
+    z-index: 5;
+
+  }
+
+  .stagger-menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: center;
+
+  }
+
+  .stagger-menu li {
+    margin-bottom: 0px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(.8, -0.015, 0.565, 1.055);
+  }
+
+  .menu-toggler:checked ~ .stagger-menu li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.155s * var(--i));
+  }
+  nav {
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0);
     position: fixed;
@@ -99,11 +170,8 @@
   
     font-size: 5vw;
     text-decoration: none;
-    padding-left: 5vh;
-    padding-right: 5vh;
     text-align: center;
-    display: none;
-  
+    width: 100%;  
   }
   a:hover {
     color: rgb(0, 0, 0);
@@ -148,21 +216,11 @@
   }
   
   #mobileNav{
-    background-color: white;
-    background-size: 100%;
     z-index: -1;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
-    animation: background-pan 30s linear infinite;
-    background: linear-gradient(
-      to right,
-      var(--g1),
-      var(--g2),
-      var(--g4),
-      var(--g5),
-      var(--g1)
-    );
     background-size: 200%;
+    padding:0;
     overflow-x: hidden;
     overflow-y: hidden;
     position: absolute;
@@ -242,6 +300,9 @@
   }
 
   #three{
+    display: none;
+  }
+  .container{
     display: none;
   }
   }

@@ -50,7 +50,7 @@
     pointer-events: none;
     transition: opacity 1200ms ease;
     width: 50vw;
-    z-index: 3;
+    z-index: -1;
   }
   @keyframes color-pan {
     from {
