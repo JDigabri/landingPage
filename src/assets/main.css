@@ -122,3 +122,24 @@
   text-align: center;
   width: 100vw;
 }
+
+@media only screen and (max-width: 1200px) {
+  
+  #title {
+    color: rgb(0, 0, 0);
+    font-family: "Rubik", sans-serif;
+    font-size: 10vw;
+    margin: 0px;
+    pointer-events: none;
+    transition: opacity 1200ms ease;
+    width: 80vw;
+    z-index: 3;
+  }
+  #title > .fancy {
+    color: var(--g3);
+    font-family: 'Dancing Script', sans-serif;    
+    font-size: 13vw;
+    line-height: 0.9em;
+  }
+
+}
