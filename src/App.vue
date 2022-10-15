@@ -1,4 +1,5 @@
 <template>
+  <meta name = "theme-color" content = "#FFA500">
   <nav id = "desktopNav">
     <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Contact</p></router-link>
     <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Mailing List</p></router-link>
