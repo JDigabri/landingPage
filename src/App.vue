@@ -2,7 +2,7 @@
   <nav id = "desktopNav">
     <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Contact</p></router-link>
     <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Mailing List</p></router-link>
-    <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Social Media</p></router-link>
+    <a href="https://github.com/JDigabri/landingPage" class ="abt" target="_blank"><p class ="hover-underline-animation" >Social Media</p></a>
     <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >About</p></router-link>
     <router-link to="/" class = "abt" ><p class ="hover-underline-animation" >Home</p></router-link>
   </nav>
@@ -15,11 +15,12 @@
 
     <ul class ="stagger-menu">
       <li class = "backgroundLI" style="--i: 0"></li>
-      <li style="--i: 1"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >Contact</p></router-link></li>
-      <li style="--i: 2"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >Mailing List</p></router-link></li>
-      <li style="--i: 3"> <router-link to="/about" class = "abt"><p class ="hover-underline-animation" >Social Media</p></router-link></li>
-      <li style="--i: 4"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >About</p></router-link></li>
-      <li style="--i: 5"> <router-link to="/" class = "abt"><p class ="hover-underline-animation" >Home</p></router-link></li>
+      <li style="--i: 1" class = "spacer"><p></p></li>
+      <li style="--i: 2"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >Contact</p></router-link></li>
+      <li style="--i: 3"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >Mailing List</p></router-link></li>
+      <li style="--i: 4"> <a href="https://github.com/JDigabri/landingPage" class ="abt" target="_blank"><p class ="hover-underline-animation" >Social Media</p></a></li>
+      <li style="--i: 5"> <router-link to="/about" class = "abt" ><p class ="hover-underline-animation" >About</p></router-link></li>
+      <li style="--i: 6"> <router-link to="/" class = "abt"><p class ="hover-underline-animation" >Home</p></router-link></li>
 
     </ul>
   </nav>
@@ -56,6 +57,10 @@
     margin: 0px;
     overflow-y: hidden;
   }
+  .spacer{
+    padding: 10%;
+
+  }
 
   /* MOBILE VIEW */
   @media only screen and (max-width: 1200px) {
@@ -75,11 +80,11 @@
     }
     
     to {
-      background-position: -200% center;
+      background-position: -600% center;
     }
   }
   .backgroundLI{
-    animation: backgroundz 30s linear infinite;
+    animation: backgroundz 90s linear infinite;
     background: linear-gradient(
       to right,
       var(--g1),
@@ -127,7 +132,7 @@
     margin-top: 0;
     font-size: 18px;
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition-property: opacity, transform;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(.6, -0.015, 0.565, 1.055);

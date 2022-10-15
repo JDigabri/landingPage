@@ -154,8 +154,18 @@
     text-align: center;
     width: 100vw;
   }
+
+  @keyframes backgroundz {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -600% center;
+    }
+  }
   body {
-    animation: background-pan 30s linear infinite;
+    animation: backgroundz 90s linear infinite;
     background: linear-gradient(
       to right,
       var(--g1),
